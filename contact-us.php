@@ -136,8 +136,8 @@
             <div class="row">
                 <div class="col-xl-6">
                     <h2 class="mb-5">get in touch</h2>
-                    <form>
-                        <div class="row gt-form">
+                    <form action="chat.php">
+                        <div class="row gt-form" >
                             <div class="col-md-6 mb-4"><input type="text" name="first_name" placeholder="Your Name">
                             </div>
                             <div class="col-md-6 mb-4"><input type="email" name="your-email" placeholder="Email"></div>

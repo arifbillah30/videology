@@ -2,13 +2,12 @@
 <html lang="en-US">
 
 
-<!-- Mirrored from iqonic.design/themes/streamitnew/frontend/html/pricing-plan.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 04 Sep 2020 20:04:55 GMT -->
 <head>
     <!-- Required meta tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Streamit - Responsive Bootstrap 4 Template</title>
+    <title>Videology - The Video Streaming Platform</title>
     <!-- Favicon -->
     <link rel="shortcut icon" href="images/favicon.ico" />
     <!-- Bootstrap CSS -->
@@ -43,7 +42,7 @@
                                 </div>
                             </a>
                             <a class="navbar-brand" href="index-2.php"> <img class="img-fluid logo" src="images/logo.png"
-                                    alt="streamit" /> </a>
+                                    alt="videology" /> </a>
                             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                 <div class="menu-main-menu-container">
                                     <ul id="top-menu" class="navbar-nav ml-auto">
@@ -97,7 +96,7 @@
                                                             <a href="#" class="iq-sub-card">
                                                                 <div class="media align-items-center">
                                                                     <img src="images/notify/thumb-1.jpg"
-                                                                        class="img-fluid mr-3" alt="streamit" />
+                                                                        class="img-fluid mr-3" alt="videology" />
                                                                     <div class="media-body">
                                                                         <h6 class="mb-0 ">Boop Bitty</h6>
                                                                         <small class="font-size-12"> just now</small>
@@ -107,7 +106,7 @@
                                                             <a href="#" class="iq-sub-card">
                                                                 <div class="media align-items-center">
                                                                     <img src="images/notify/thumb-2.jpg"
-                                                                        class="img-fluid mr-3" alt="streamit" />
+                                                                        class="img-fluid mr-3" alt="videology" />
                                                                     <div class="media-body">
                                                                         <h6 class="mb-0 ">The Last Breath</h6>
                                                                         <small class="font-size-12">15 minutes ago</small>
@@ -117,7 +116,7 @@
                                                             <a href="#" class="iq-sub-card">
                                                                 <div class="media align-items-center">
                                                                     <img src="images/notify/thumb-3.jpg"
-                                                                        class="img-fluid mr-3" alt="streamit" />
+                                                                        class="img-fluid mr-3" alt="videology" />
                                                                     <div class="media-body">
                                                                         <h6 class="mb-0 ">The Hero Camp</h6>
                                                                         <small class="font-size-12">1 hour ago</small>
@@ -219,7 +218,7 @@
                                                     <a href="#" class="iq-sub-card">
                                                         <div class="media align-items-center">
                                                             <img src="images/notify/thumb-1.jpg" class="img-fluid mr-3"
-                                                                alt="streamit" />
+                                                                alt="videology" />
                                                             <div class="media-body">
                                                                 <h6 class="mb-0 ">Boot Bitty</h6>
                                                                 <small class="font-size-12"> just now</small>
@@ -229,7 +228,7 @@
                                                     <a href="#" class="iq-sub-card">
                                                         <div class="media align-items-center">
                                                             <img src="images/notify/thumb-2.jpg" class="img-fluid mr-3"
-                                                                alt="streamit" />
+                                                                alt="videology" />
                                                             <div class="media-body">
                                                                 <h6 class="mb-0 ">The Last Breath</h6>
                                                                 <small class="font-size-12">15 minutes ago</small>
@@ -239,7 +238,7 @@
                                                     <a href="#" class="iq-sub-card">
                                                         <div class="media align-items-center">
                                                             <img src="images/notify/thumb-3.jpg" class="img-fluid mr-3"
-                                                                alt="streamit" />
+                                                                alt="videology" />
                                                             <div class="media-body">
                                                                 <h6 class="mb-0 ">The Hero Camp</h6>
                                                                 <small class="font-size-12">1 hour ago</small>
@@ -499,5 +498,4 @@
 </body>
 
 
-<!-- Mirrored from iqonic.design/themes/streamitnew/frontend/html/pricing-plan.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 04 Sep 2020 20:04:55 GMT -->
 </html>

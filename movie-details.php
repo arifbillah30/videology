@@ -2,7 +2,6 @@
 <html lang="en-US">
 
 
-<!-- Mirrored from iqonic.design/themes/streamitnew/frontend/html/movie-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 04 Sep 2020 20:05:03 GMT -->
 <head>
    <!-- Required meta tags -->
    <meta charset="UTF-8">
@@ -751,5 +750,4 @@
 </body>
 
 
-<!-- Mirrored from iqonic.design/themes/streamitnew/frontend/html/movie-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 04 Sep 2020 20:05:03 GMT -->
 </html>

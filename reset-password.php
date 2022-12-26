@@ -1,9 +1,7 @@
 <!doctype html>
 <html lang="en-US">
 
-<!-- Mirrored from iqonic.design/themes/streamitnew/frontend/html/reset-password.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 04 Sep 2020 20:05:16 GMT -->
 <head>
-   <!-- Required meta tags -->
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -35,7 +33,7 @@
                   <div class="sign-in-from w-100 m-auto">
                      <h3 class="mb-3 text-center">Reset Password</h3>
                      <p class="text-body">Enter your email address and we'll send you an email with instructions to reset your password.</p>
-                     <form class="mt-4" action="https://iqonic.design/themes/streamitnew/frontend/html/index.html">
+                     <form class="mt-4" action="#">
                         <div class="form-group">                                 
                            <input type="email" class="form-control mb-0" id="exampleInputEmail2" placeholder="Enter email" autocomplete="off" required>
                         </div>                           
@@ -74,5 +72,4 @@
 <script src="js/custom.js"></script>
 </body>
 
-<!-- Mirrored from iqonic.design/themes/streamitnew/frontend/html/reset-password.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 04 Sep 2020 20:05:16 GMT -->
 </html>

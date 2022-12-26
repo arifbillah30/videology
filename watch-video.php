@@ -2,11 +2,10 @@
 <html lang="en-US">
 
 <head>
-   <!-- Required meta tags -->
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   <title>Streamit - Responsive Bootstrap 4 Template</title>
+   <title>Videology - The Video Streaming Platform</title>
    <!-- Favicon -->
    <link rel="shortcut icon" href="images/favicon.ico"/>
    <!-- Bootstrap CSS -->
@@ -57,5 +56,4 @@
 <script src="js/custom.js"></script>
 </body>
 
-<!-- Mirrored from iqonic.design/themes/streamitnew/frontend/html/watch-video.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 04 Sep 2020 20:05:03 GMT -->
 </html>

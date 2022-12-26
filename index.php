@@ -162,6 +162,8 @@
          </div>
       </header>
       <!-- Header End -->
+
+
       <!-- Slider Start -->
       <section id="home" class="iq-main-slider p-0">
          <div id="home-slider" class="slider m-0 p-0">
@@ -301,6 +303,9 @@
          </svg>
       </section>
       <!-- Slider End -->
+
+
+      
       <!-- MainContent -->
       <div class="main-content">
          <section id="iq-favorites">
