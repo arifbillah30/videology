@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en-US">
 
-<!-- Mirrored from iqonic.design/themes/streamitnew/frontend/html/watch-video.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 04 Sep 2020 20:05:03 GMT -->
 <head>
    <!-- Required meta tags -->
    <meta charset="UTF-8">
