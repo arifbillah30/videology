@@ -41,19 +41,19 @@
                            <span class="navbar-menu-icon navbar-menu-icon--bottom"></span>
                         </div>
                      </a>
-                     <a class="navbar-brand" href="index-2.html"> <img class="img-fluid logo" src="images/logo.png"
+                     <a class="navbar-brand" href="index-2.php"> <img class="img-fluid logo" src="images/logo.png"
                            alt="videology" /> </a>
                      <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <div class="menu-main-menu-container">
                            <ul id="top-menu" class="navbar-nav ml-auto">
                               <li class="menu-item">
-                                 <a href="index-2.html">Home</a>
+                                 <a href="index-2.php">Home</a>
                               </li>
                               <li class="menu-item">
-                                 <a href="show-category.html">Tv Shows</a>
+                                 <a href="show-category.php">Tv Shows</a>
                               </li>
                               <li class="menu-item">
-                                 <a href="movie-category.html">Movies</a>
+                                 <a href="movie-category.php">Movies</a>
                               </li>
                            </ul>
                         </div>
@@ -135,7 +135,7 @@
                                     <div class="iq-sub-dropdown iq-user-dropdown">
                                        <div class="iq-card shadow-none m-0">
                                           <div class="iq-card-body p-0 pl-3 pr-3">
-                                             <a href="manage-profile.html" class="iq-sub-card setting-dropdown">
+                                             <a href="manage-profile.php" class="iq-sub-card setting-dropdown">
                                                 <div class="media align-items-center">
                                                    <div class="right-icon">
                                                       <i class="ri-file-user-line text-primary"></i>
@@ -145,7 +145,7 @@
                                                    </div>
                                                 </div>
                                              </a>
-                                             <a href="setting.html" class="iq-sub-card setting-dropdown">
+                                             <a href="setting.php" class="iq-sub-card setting-dropdown">
                                                 <div class="media align-items-center">
                                                    <div class="right-icon">
                                                       <i class="ri-settings-4-line text-primary"></i>
@@ -155,7 +155,7 @@
                                                    </div>
                                                 </div>
                                              </a>
-                                             <a href="pricing-plan.html" class="iq-sub-card setting-dropdown">
+                                             <a href="pricing-plan.php" class="iq-sub-card setting-dropdown">
                                                 <div class="media align-items-center">
                                                    <div class="right-icon">
                                                       <i class="ri-settings-4-line text-primary"></i>
@@ -165,7 +165,7 @@
                                                    </div>
                                                 </div>
                                              </a>
-                                             <a href="login.html" class="iq-sub-card setting-dropdown">
+                                             <a href="login.php" class="iq-sub-card setting-dropdown">
                                                 <div class="media align-items-center">
                                                    <div class="right-icon">
                                                       <i class="ri-logout-circle-line text-primary"></i>
@@ -251,7 +251,7 @@
                               <div class="iq-sub-dropdown iq-user-dropdown">
                                  <div class="iq-card shadow-none m-0">
                                     <div class="iq-card-body p-0 pl-3 pr-3">
-                                       <a href="manage-profile.html" class="iq-sub-card setting-dropdown">
+                                       <a href="manage-profile.php" class="iq-sub-card setting-dropdown">
                                           <div class="media align-items-center">
                                              <div class="right-icon">
                                                 <i class="ri-file-user-line text-primary"></i>
@@ -261,7 +261,7 @@
                                              </div>
                                           </div>
                                        </a>
-                                       <a href="setting.html" class="iq-sub-card setting-dropdown">
+                                       <a href="setting.php" class="iq-sub-card setting-dropdown">
                                           <div class="media align-items-center">
                                              <div class="right-icon">
                                                 <i class="ri-settings-4-line text-primary"></i>
@@ -271,7 +271,7 @@
                                              </div>
                                           </div>
                                        </a>
-                                       <a href="pricing-plan.html" class="iq-sub-card setting-dropdown">
+                                       <a href="pricing-plan.php" class="iq-sub-card setting-dropdown">
                                           <div class="media align-items-center">
                                              <div class="right-icon">
                                                 <i class="ri-settings-4-line text-primary"></i>
@@ -281,7 +281,7 @@
                                              </div>
                                           </div>
                                        </a>
-                                       <a href="login.html" class="iq-sub-card setting-dropdown">
+                                       <a href="login.php" class="iq-sub-card setting-dropdown">
                                           <div class="media align-items-center">
                                              <div class="right-icon">
                                                 <i class="ri-logout-circle-line text-primary"></i>
@@ -352,7 +352,7 @@
                   <div class="col-sm-12 overflow-hidden">
                      <div class="iq-main-header d-flex align-items-center justify-content-between">
                         <h4 class="main-title">Latest Episodes</h4>
-                        <a href="show-single.html" class="text-primary">View all</a>
+                        <a href="show-single.php" class="text-primary">View all</a>
                      </div>
                   </div>
                </div>
@@ -364,7 +364,7 @@
                            <div class="episode-number">1</div>
                            <div class="episode-play-info">
                               <div class="episode-play">
-                                 <a href="show-details.html">
+                                 <a href="show-details.php">
                                     <i class="ri-play-fill"></i>
                                  </a>
                               </div>
@@ -375,7 +375,7 @@
                               <span class="text-white">11 Aug 20</span>
                               <span class="text-primary">30m</span>
                            </div>
-                           <a href="show-details.html">
+                           <a href="show-details.php">
                               <h6 class="epi-name text-white mb-0">Lorem Ipsum is simply dummy text
                               </h6>
                            </a>
@@ -389,7 +389,7 @@
                            <div class="episode-number">2</div>
                            <div class="episode-play-info">
                               <div class="episode-play">
-                                 <a href="show-details.html">
+                                 <a href="show-details.php">
                                     <i class="ri-play-fill"></i>
                                  </a>
                               </div>
@@ -400,7 +400,7 @@
                               <span class="text-white">11 Aug 20</span>
                               <span class="text-primary">30m</span>
                            </div>
-                           <a href="show-details.html">
+                           <a href="show-details.php">
                               <h6 class="epi-name text-white mb-0">Lorem Ipsum is simply dummy text
                               </h6>
                            </a>
@@ -414,7 +414,7 @@
                            <div class="episode-number">3</div>
                            <div class="episode-play-info">
                               <div class="episode-play">
-                                 <a href="show-details.html">
+                                 <a href="show-details.php">
                                     <i class="ri-play-fill"></i>
                                  </a>
                               </div>
@@ -425,7 +425,7 @@
                               <span class="text-white">11 Aug 20</span>
                               <span class="text-primary">30m</span>
                            </div>
-                           <a href="show-details.html">
+                           <a href="show-details.php">
                               <h6 class="epi-name text-white mb-0">Lorem Ipsum is simply dummy text
                               </h6>
                            </a>
@@ -439,7 +439,7 @@
                            <div class="episode-number">4</div>
                            <div class="episode-play-info">
                               <div class="episode-play">
-                                 <a href="show-details.html">
+                                 <a href="show-details.php">
                                     <i class="ri-play-fill"></i>
                                  </a>
                               </div>
@@ -450,7 +450,7 @@
                               <span class="text-white">11 Aug 20</span>
                               <span class="text-primary">30m</span>
                            </div>
-                           <a href="show-details.html">
+                           <a href="show-details.php">
                               <h6 class="epi-name text-white mb-0">Lorem Ipsum is simply dummy text
                               </h6>
                            </a>
@@ -464,7 +464,7 @@
                            <div class="episode-number">5</div>
                            <div class="episode-play-info">
                               <div class="episode-play">
-                                 <a href="show-details.html">
+                                 <a href="show-details.php">
                                     <i class="ri-play-fill"></i>
                                  </a>
                               </div>
@@ -475,7 +475,7 @@
                               <span class="text-white">11 Aug 20</span>
                               <span class="text-primary">30m</span>
                            </div>
-                           <a href="show-details.html">
+                           <a href="show-details.php">
                               <h6 class="epi-name text-white mb-0">Lorem Ipsum is simply dummy text
                               </h6>
                            </a>
@@ -489,7 +489,7 @@
                            <div class="episode-number">6</div>
                            <div class="episode-play-info">
                               <div class="episode-play">
-                                 <a href="show-details.html">
+                                 <a href="show-details.php">
                                     <i class="ri-play-fill"></i>
                                  </a>
                               </div>
@@ -500,7 +500,7 @@
                               <span class="text-white">11 Aug 20</span>
                               <span class="text-primary">30m</span>
                            </div>
-                           <a href="show-details.html">
+                           <a href="show-details.php">
                               <h6 class="epi-name text-white mb-0">Lorem Ipsum is simply dummy text
                               </h6>
                            </a>
@@ -514,7 +514,7 @@
                            <div class="episode-number">7</div>
                            <div class="episode-play-info">
                               <div class="episode-play">
-                                 <a href="show-details.html">
+                                 <a href="show-details.php">
                                     <i class="ri-play-fill"></i>
                                  </a>
                               </div>
@@ -525,7 +525,7 @@
                               <span class="text-white">11 Aug 20</span>
                               <span class="text-primary">30m</span>
                            </div>
-                           <a href="show-details.html">
+                           <a href="show-details.php">
                               <h6 class="epi-name text-white mb-0">Lorem Ipsum is simply dummy text
                               </h6>
                            </a>
@@ -539,7 +539,7 @@
                            <div class="episode-number">8</div>
                            <div class="episode-play-info">
                               <div class="episode-play">
-                                 <a href="show-details.html">
+                                 <a href="show-details.php">
                                     <i class="ri-play-fill"></i>
                                  </a>
                               </div>
@@ -550,7 +550,7 @@
                               <span class="text-white">11 Aug 20</span>
                               <span class="text-primary">30m</span>
                            </div>
-                           <a href="show-details.html">
+                           <a href="show-details.php">
                               <h6 class="epi-name text-white mb-0">Lorem Ipsum is simply dummy text
                               </h6>
                            </a>
@@ -564,7 +564,7 @@
                            <div class="episode-number">9</div>
                            <div class="episode-play-info">
                               <div class="episode-play">
-                                 <a href="show-details.html">
+                                 <a href="show-details.php">
                                     <i class="ri-play-fill"></i>
                                  </a>
                               </div>
@@ -575,7 +575,7 @@
                               <span class="text-white">11 Aug 20</span>
                               <span class="text-primary">30m</span>
                            </div>
-                           <a href="show-details.html">
+                           <a href="show-details.php">
                               <h6 class="epi-name text-white mb-0">Lorem Ipsum is simply dummy text
                               </h6>
                            </a>
@@ -589,7 +589,7 @@
                            <div class="episode-number">10</div>
                            <div class="episode-play-info">
                               <div class="episode-play">
-                                 <a href="show-details.html">
+                                 <a href="show-details.php">
                                     <i class="ri-play-fill"></i>
                                  </a>
                               </div>
@@ -600,7 +600,7 @@
                               <span class="text-white">11 Aug 20</span>
                               <span class="text-primary">30m</span>
                            </div>
-                           <a href="show-details.html">
+                           <a href="show-details.php">
                               <h6 class="epi-name text-white mb-0">Lorem Ipsum is simply dummy text
                               </h6>
                            </a>
@@ -619,8 +619,8 @@
                <div class="col-lg-3 col-md-4">
                   <ul class="f-link list-unstyled mb-0">
                      <li><a href="#">About Us</a></li>
-                     <li><a href="movie-category.html">Movies</a></li>
-                     <li><a href="show-category.html">Tv Shows</a></li>
+                     <li><a href="movie-category.php">Movies</a></li>
+                     <li><a href="show-category.php">Tv Shows</a></li>
                      <li><a href="#">Coporate Information</a></li>
                   </ul>
                </div>

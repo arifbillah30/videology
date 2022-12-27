@@ -1,9 +1,9 @@
 <?php
 session_start();
-include "includes/db_conn.php";
-if (isset($_SESSION['id']) && isset($_SESSION['email'])) {   ?>
+include "includes/db_connect.php";
+if (isset($_SESSION['username']) && isset($_SESSION['email'])) { ?>
 
-
+    
 
 <!doctype html>
 <html lang="en-US">
@@ -32,6 +32,54 @@ if (isset($_SESSION['id']) && isset($_SESSION['email'])) {   ?>
         </div>
     </div>
     <!-- loader END -->
+
+        <?php
+
+                    $email = $_SESSION["email"];
+
+                    $sql = "SELECT username, dob, gender, language
+                    FROM users
+                    INNER JOIN personal_details
+                    ON users.id = personal_details.user_id
+                    WHERE ( email = '$email' )";
+                    $result = mysqli_query($con, $sql);
+
+                    $row = mysqli_fetch_assoc($result);
+
+                    $username = $row['username'];
+                    $dob = $row['dob'];
+                    $gender = $row['gender'];
+                    $language = $row['language'];
+
+
+    if (isset($_POST['save'])) {
+
+        $username1 = ($_POST['username']);
+        $dob1 = ($_POST['dob']);
+        $gender1 = (($_POST['gender']));
+        $language1 = (($_POST['language']));
+
+            $query = "
+            UPDATE
+            users u,
+            personal_details p
+        SET
+            u.username =  '$username1',
+            p.dob = '$dob1',
+            p.gender = '$gender1',
+            p.language = '$language1'
+            WHERE (email = '$email')";
+
+            $result = mysqli_query($con, $query) or die("Query Failed.");
+
+        }
+
+            ?>
+
+
+
+
+
     <!-- Header -->
     <header id="main-header">
         <div class="main-header">
@@ -57,10 +105,10 @@ if (isset($_SESSION['id']) && isset($_SESSION['email'])) {   ?>
                                             <a href="index-2.php">Home</a>
                                         </li>
                                         <li class="menu-item">
-                                            <a href="show-category.html">Tv Shows</a>
+                                            <a href="show-category.php">Tv Shows</a>
                                         </li>
                                         <li class="menu-item">
-                                            <a href="movie-category.html">Movies</a>
+                                            <a href="movie-category.php">Movies</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -143,7 +191,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['email'])) {   ?>
                                                 <div class="iq-sub-dropdown iq-user-dropdown">
                                                     <div class="iq-card shadow-none m-0">
                                                         <div class="iq-card-body p-0 pl-3 pr-3">
-                                                            <a href="manage-profile.html"
+                                                            <a href="manage-profile.php"
                                                                 class="iq-sub-card setting-dropdown">
                                                                 <div class="media align-items-center">
                                                                     <div class="right-icon">
@@ -154,7 +202,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['email'])) {   ?>
                                                                     </div>
                                                                 </div>
                                                             </a>
-                                                            <a href="setting.html" class="iq-sub-card setting-dropdown">
+                                                            <a href="setting.php" class="iq-sub-card setting-dropdown">
                                                                 <div class="media align-items-center">
                                                                     <div class="right-icon">
                                                                         <i class="ri-settings-4-line text-primary"></i>
@@ -164,7 +212,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['email'])) {   ?>
                                                                     </div>
                                                                 </div>
                                                             </a>
-                                                            <a href="pricing-plan.html"
+                                                            <a href="pricing-plan.php"
                                                                 class="iq-sub-card setting-dropdown">
                                                                 <div class="media align-items-center">
                                                                     <div class="right-icon">
@@ -175,7 +223,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['email'])) {   ?>
                                                                     </div>
                                                                 </div>
                                                             </a>
-                                                            <a href="login.html" class="iq-sub-card setting-dropdown">
+                                                            <a href="login.php" class="iq-sub-card setting-dropdown">
                                                                 <div class="media align-items-center">
                                                                     <div class="right-icon">
                                                                         <i class="ri-logout-circle-line text-primary"></i>
@@ -275,7 +323,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['email'])) {   ?>
                                                             </div>
                                                         </div>
                                                     </a>
-                                                    <a href="setting.html" class="iq-sub-card setting-dropdown">
+                                                    <a href="setting.php" class="iq-sub-card setting-dropdown">
                                                         <div class="media align-items-center">
                                                             <div class="right-icon">
                                                                 <i class="ri-settings-4-line text-primary"></i>
@@ -285,7 +333,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['email'])) {   ?>
                                                             </div>
                                                         </div>
                                                     </a>
-                                                    <a href="pricing-plan.html" class="iq-sub-card setting-dropdown">
+                                                    <a href="pricing-plan.php" class="iq-sub-card setting-dropdown">
                                                         <div class="media align-items-center">
                                                             <div class="right-icon">
                                                                 <i class="ri-settings-4-line text-primary"></i>
@@ -295,7 +343,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['email'])) {   ?>
                                                             </div>
                                                         </div>
                                                     </a>
-                                                    <a href="login.html" class="iq-sub-card setting-dropdown">
+                                                    <a href="includes/logout.php" class="iq-sub-card setting-dropdown">
                                                         <div class="media align-items-center">
                                                             <div class="right-icon">
                                                                 <i class="ri-logout-circle-line text-primary"></i>
@@ -335,38 +383,55 @@ if (isset($_SESSION['id']) && isset($_SESSION['email'])) {   ?>
                                 </div>
                                 </div>
                             </div>
+
+
+
+
+   
+
+
+
                             <div class="col-lg-10 device-margin">
                                 <div class="profile-from">
                                     <h4 class="mb-3">Manage Profile</h4>
-                                    <form class="mt-4" action="">
+
+                                    <form class="mt-4" method="POST" action="">
+
+
                                         <div class="form-group">
                                             <label>Name</label>
-                                            <input type="text" class="form-control mb-0" id="exampleInputl2"
-                                                placeholder="Enter Your Name" autocomplete="off" required>
+                                            <input type="text" class="form-control mb-0" id="exampleInputl2" name="username"
+                                                placeholder="Enter Your Name" autocomplete="off" value= "<?php echo($username)?>" required
+                                                
+                                                >
                                         </div>
                                         <div class="form-group">
                                             <label>Date of Birth</label>
                                             <input type="text" class="form-control date-input basicFlatpickr mb-0" placeholder="Select Date" id="exampleInputPassword2"
+                                            name ="dob" value="<?php echo($dob)?>" 
                                             required>
                                         </div>
                                         <div class="form-group d-flex flex-md-row flex-column">
                                             <div class="iq-custom-select d-inline-block manage-gen">
-                                                <select name="cars" class="form-control pro-dropdown">
-                                                    <option value="female">Female</option>
-                                                    <option value="male">Male</option>
+                                                <select name="gender" class="form-control pro-dropdown" >
+
+                                                    
+                                                    <option value="Female" <?php if($gender=='Female') echo('selected') ?> >Female</option>
+                                                    <option value="Male" <?php if($gender=='Male') echo('selected') ?>>Male</option>
                                                 </select>
                                             </div>
                                             <div class="iq-custom-select d-inline-block lang-dropdown manage-dd">
-                                                <select name="cars" class="form-control pro-dropdown" id="lang"
+                                                <select name="language" class="form-control pro-dropdown" id="lang"
                                                     multiple="multiple">
-                                                    <option value="english">English</option>
-                                                    <option value="bengali"> বাংলা </option ption>
+                                                    <option value="English" <?php if($language=='English') echo('selected') ?> > English </option>
+                    
+                                                    <option value="Bangla" <?php if($language=='Bangla') echo('selected') ?> > বাংলা </option>
                                                 </select>
                                             </div>
                                         </div>
                                         <div class="d-flex">
-                                            <a href="#" class="btn btn-hover">Save</a>
-                                            <a href="#" class="btn btn-link">Cancel</a>
+                                        <button type="submit" name="save" class="btn btn-hover">Save</button>
+                                            <a href="index-2.php" class="btn btn-link">Cancel</a>
                                         </div>
                                     </form>
                                 </div>
@@ -384,8 +449,8 @@ if (isset($_SESSION['id']) && isset($_SESSION['email'])) {   ?>
                     <div class="col-lg-3 col-md-4">
                         <ul class="f-link list-unstyled mb-0">
                             <li><a href="#">About Us</a></li>
-                            <li><a href="movie-category.html">Movies</a></li>
-                            <li><a href="show-category.html">Tv Shows</a></li>
+                            <li><a href="movie-category.php">Movies</a></li>
+                            <li><a href="show-category.php">Tv Shows</a></li>
                             <li><a href="#">Coporate Information</a></li>
                         </ul>
                     </div>
@@ -460,4 +525,5 @@ if (isset($_SESSION['id']) && isset($_SESSION['email'])) {   ?>
 
 <?php } else {
     header("Location: login.php");
-} ?>
+} 
+?>

@@ -4,7 +4,6 @@ include "db_connect.php";
 
 if (isset($_POST['email']) && isset($_POST['password'])) {
 
-	echo ("arif");
 
 	$email = $_POST['email'];
 	$password = $_POST['password'];
@@ -22,6 +21,11 @@ if (empty($email)) {
 		// the user name must be unique
 		$row = mysqli_fetch_assoc($result);
 		if ($row['password'] === $password) {
+			$_SESSION['id'] = $row['id'];
+			$_SESSION['username'] = $row['username'];	
+			$_SESSION['email'] = $row['email'];
+			$_SESSION['role'] = $row['role'];
+
 			header("Location: ../index-2.php");
 		} else {
 			header("Location: ../login.php?error=Incorect User name or password");

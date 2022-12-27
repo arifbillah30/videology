@@ -1,5 +1,13 @@
-<!doctype html>
-<html lang="en-US">
+<?php
+session_start();
+
+if (empty($_SESSION['username'])) { ?>
+
+   <!doctype html>
+   <html lang="en-US">
+
+
+         <?php echo "Arif" ?>
 
 <head>
    <!-- Required meta tags -->
@@ -49,17 +57,19 @@
                                  <input type="checkbox" class="custom-control-input" id="customCheck">
                                  <label class="custom-control-label" for="customCheck">Remember Me</label>
                               </div>                                
-                           </div>                                    
+                           </div> 
+                           
+                           <script src="javascript/login.js"></script>
                         
                      </form>
                   </div>
                </div>
                <div class="mt-3">
                   <div class="d-flex justify-content-center links">
-                     Don't have an account? <a href="sign-up.html" class="text-primary ml-2">Sign Up</a>
+                     Don't have an account? <a href="sign-up.php" class="text-primary ml-2">Sign Up</a>
                   </div>
                   <div class="d-flex justify-content-center links">
-                     <a href="reset-password.html" class="f-link">Forgot your password?</a>
+                     <a href="reset-password.php" class="f-link">Forgot your password?</a>
                   </div>
                </div>
             </div>
@@ -90,3 +100,10 @@
 </body>
 
 </html>
+
+
+<?php }else {
+    header("Location: login.php");
+} 
+
+?>

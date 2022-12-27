@@ -47,10 +47,10 @@
                                  <a href="index-2.php">Home</a>
                               </li>
                               <li class="menu-item">
-                                 <a href="show-category.html">Tv Shows</a>
+                                 <a href="show-category.php">Tv Shows</a>
                               </li>
                               <li class="menu-item">
-                                 <a href="movie-category.html">Movies</a>
+                                 <a href="movie-category.php">Movies</a>
                               </li>
                            </ul>
                         </div>
@@ -132,7 +132,7 @@
                                     <div class="iq-sub-dropdown iq-user-dropdown">
                                        <div class="iq-card shadow-none m-0">
                                           <div class="iq-card-body p-0 pl-3 pr-3">
-                                             <a href="manage-profile.html" class="iq-sub-card setting-dropdown">
+                                             <a href="manage-profile.php" class="iq-sub-card setting-dropdown">
                                                 <div class="media align-items-center">
                                                    <div class="right-icon">
                                                       <i class="ri-file-user-line text-primary"></i>
@@ -142,7 +142,7 @@
                                                    </div>
                                                 </div>
                                              </a>
-                                             <a href="setting.html" class="iq-sub-card setting-dropdown">
+                                             <a href="setting.php" class="iq-sub-card setting-dropdown">
                                                 <div class="media align-items-center">
                                                    <div class="right-icon">
                                                       <i class="ri-settings-4-line text-primary"></i>
@@ -152,7 +152,7 @@
                                                    </div>
                                                 </div>
                                              </a>
-                                             <a href="pricing-plan.html" class="iq-sub-card setting-dropdown">
+                                             <a href="pricing-plan.php" class="iq-sub-card setting-dropdown">
                                                 <div class="media align-items-center">
                                                    <div class="right-icon">
                                                       <i class="ri-settings-4-line text-primary"></i>
@@ -162,7 +162,7 @@
                                                    </div>
                                                 </div>
                                              </a>
-                                             <a href="login.html" class="iq-sub-card setting-dropdown">
+                                             <a href="login.php" class="iq-sub-card setting-dropdown">
                                                 <div class="media align-items-center">
                                                    <div class="right-icon">
                                                       <i class="ri-logout-circle-line text-primary"></i>
@@ -248,7 +248,7 @@
                               <div class="iq-sub-dropdown iq-user-dropdown">
                                  <div class="iq-card shadow-none m-0">
                                     <div class="iq-card-body p-0 pl-3 pr-3">
-                                       <a href="manage-profile.html" class="iq-sub-card setting-dropdown">
+                                       <a href="manage-profile.php" class="iq-sub-card setting-dropdown">
                                           <div class="media align-items-center">
                                              <div class="right-icon">
                                                 <i class="ri-file-user-line text-primary"></i>
@@ -258,7 +258,7 @@
                                              </div>
                                           </div>
                                        </a>
-                                       <a href="setting.html" class="iq-sub-card setting-dropdown">
+                                       <a href="setting.php" class="iq-sub-card setting-dropdown">
                                           <div class="media align-items-center">
                                              <div class="right-icon">
                                                 <i class="ri-settings-4-line text-primary"></i>
@@ -268,7 +268,7 @@
                                              </div>
                                           </div>
                                        </a>
-                                       <a href="pricing-plan.html" class="iq-sub-card setting-dropdown">
+                                       <a href="pricing-plan.php" class="iq-sub-card setting-dropdown">
                                           <div class="media align-items-center">
                                              <div class="right-icon">
                                                 <i class="ri-settings-4-line text-primary"></i>
@@ -278,7 +278,7 @@
                                              </div>
                                           </div>
                                        </a>
-                                       <a href="login.html" class="iq-sub-card setting-dropdown">
+                                       <a href="login.php" class="iq-sub-card setting-dropdown">
                                           <div class="media align-items-center">
                                              <div class="right-icon">
                                                 <i class="ri-logout-circle-line text-primary"></i>
@@ -306,7 +306,7 @@
    <section class="iq-main-slider p-0">
       <div id="tvshows-slider">
          <div>
-            <a href="movie-details.html">
+            <a href="movie-details.php">
                <div class="shows-img">
                   <img src="images/movie-banner/1.jpg" class="w-100" alt="">
                   <div class="shows-content">
@@ -320,7 +320,7 @@
             </a>
          </div>
          <div>
-            <a href="movie-details.html">
+            <a href="movie-details.php">
                <div class="shows-img">
                   <img src="images/movie-banner/2.jpg" class="w-100" alt="">
                   <div class="shows-content">
@@ -334,7 +334,7 @@
             </a>
          </div>
          <div>
-            <a href="movie-details.html">
+            <a href="movie-details.php">
                <div class="shows-img">
                   <img src="images/movie-banner/3.jpg" class="w-100" alt="">
                   <div class="shows-content">
@@ -382,7 +382,7 @@
                   <div class="favorites-contens">
                      <ul class="favorites-slider list-inline  row p-0 mb-0">
                         <li class="slide-item">
-                           <a href="movie-details.html">
+                           <a href="movie-details.php">
                               <div class="block-images position-relative">
                                  <div class="img-box">
                                     <img src="images/upcoming/01.jpg" class="img-fluid" alt="">
@@ -410,7 +410,7 @@
                            </a>
                         </li>
                         <li class="slide-item">
-                           <a href="movie-details.html">
+                           <a href="movie-details.php">
                               <div class="block-images position-relative">
                                  <div class="img-box">
                                     <img src="images/upcoming/02.jpg" class="img-fluid" alt="">
@@ -439,7 +439,7 @@
                            </a>
                         </li>
                         <li class="slide-item">
-                           <a href="movie-details.html">
+                           <a href="movie-details.php">
                               <div class="block-images position-relative">
                                  <div class="img-box">
                                     <img src="images/upcoming/03.jpg" class="img-fluid" alt="">
@@ -468,7 +468,7 @@
                            </a>
                         </li>
                         <li class="slide-item">
-                           <a href="movie-details.html">
+                           <a href="movie-details.php">
                               <div class="block-images position-relative">
                                  <div class="img-box">
                                     <img src="images/upcoming/04.jpg" class="img-fluid" alt="">
@@ -497,7 +497,7 @@
                            </a>
                         </li>
                         <li class="slide-item">
-                           <a href="movie-details.html">
+                           <a href="movie-details.php">
                               <div class="block-images position-relative">
                                  <div class="img-box">
                                     <img src="images/upcoming/05.jpg" class="img-fluid" alt="">
@@ -541,7 +541,7 @@
                   <div class="upcoming-contens">
                      <ul class="favorites-slider list-inline row p-0 mb-0">
                         <li class="slide-item">
-                           <a href="movie-details.html">
+                           <a href="movie-details.php">
                               <div class="block-images position-relative">
                                  <div class="img-box">
                                     <img src="images/movies/01.jpg" class="img-fluid" alt="">
@@ -569,7 +569,7 @@
                            </a>
                         </li>
                         <li class="slide-item">
-                           <a href="movie-details.html">
+                           <a href="movie-details.php">
                               <div class="block-images position-relative">
                                  <div class="img-box">
                                     <img src="images/movies/02.jpg" class="img-fluid" alt="">
@@ -597,7 +597,7 @@
                            </a>
                         </li>
                         <li class="slide-item">
-                           <a href="movie-details.html">
+                           <a href="movie-details.php">
                               <div class="block-images position-relative">
                                  <div class="img-box">
                                     <img src="images/movies/03.jpg" class="img-fluid" alt="">
@@ -625,7 +625,7 @@
                            </a>
                         </li>
                         <li class="slide-item">
-                           <a href="movie-details.html">
+                           <a href="movie-details.php">
                               <div class="block-images position-relative">
                                  <div class="img-box">
                                     <img src="images/movies/04.jpg" class="img-fluid" alt="">
@@ -653,7 +653,7 @@
                            </a>
                         </li>
                         <li class="slide-item">
-                           <a href="movie-details.html">
+                           <a href="movie-details.php">
                               <div class="block-images position-relative">
                                  <div class="img-box">
                                     <img src="images/movies/05.jpg" class="img-fluid" alt="">
@@ -696,7 +696,7 @@
                   <div class="suggestede-contens">
                      <ul class="list-inline favorites-slider row p-0 mb-0">
                         <li class="slide-item">
-                           <a href="movie-details.html">
+                           <a href="movie-details.php">
                               <div class="block-images position-relative">
                                  <div class="img-box">
                                     <img src="images/movies/06.jpg" class="img-fluid" alt="">
@@ -724,7 +724,7 @@
                            </a>
                         </li>
                         <li class="slide-item">
-                           <a href="movie-details.html">
+                           <a href="movie-details.php">
                               <div class="block-images position-relative">
                                  <div class="img-box">
                                     <img src="images/movies/07.jpg" class="img-fluid" alt="">
@@ -752,7 +752,7 @@
                            </a>
                         </li>
                         <li class="slide-item">
-                           <a href="movie-details.html">
+                           <a href="movie-details.php">
                               <div class="block-images position-relative">
                                  <div class="img-box">
                                     <img src="images/movies/08.jpg" class="img-fluid" alt="">
@@ -780,7 +780,7 @@
                            </a>
                         </li>
                         <li class="slide-item">
-                           <a href="movie-details.html">
+                           <a href="movie-details.php">
                               <div class="block-images position-relative">
                                  <div class="img-box">
                                     <img src="images/movies/09.jpg" class="img-fluid" alt="">
@@ -808,7 +808,7 @@
                            </a>
                         </li>
                         <li class="slide-item">
-                           <a href="movie-details.html">
+                           <a href="movie-details.php">
                               <div class="block-images position-relative">
                                  <div class="img-box">
                                     <img src="images/movies/10.jpg" class="img-fluid" alt="">
@@ -849,8 +849,8 @@
                <div class="col-lg-3 col-md-4">
                   <ul class="f-link list-unstyled mb-0">
                      <li><a href="#">About Us</a></li>
-                     <li><a href="movie-category.html">Movies</a></li>
-                     <li><a href="show-category.html">Tv Shows</a></li>
+                     <li><a href="movie-category.php">Movies</a></li>
+                     <li><a href="show-category.php">Tv Shows</a></li>
                      <li><a href="#">Coporate Information</a></li>
                   </ul>
                </div>

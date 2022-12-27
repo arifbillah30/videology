@@ -13,7 +13,7 @@
    <link rel="stylesheet" href="css/bootstrap.min.css"/>
    <!-- Typography CSS -->
    <link rel="stylesheet" href="css/typography.css">
-   <!-- Style 
+   <!-- Style  -->
    <link rel="stylesheet" href="css/style.css"/>
    <!-- Responsive -->
    <link rel="stylesheet" href="css/responsive.css"/>
@@ -36,8 +36,7 @@
                   $email = ($_POST['email']);
                   $password = (($_POST['password']));
 
-                      echo ($username);
-
+                  
                   if (empty($username)) {
                      header("Location: sign-up.php?error=Nam is Required.#registration");
                   }  elseif (empty($email)) {

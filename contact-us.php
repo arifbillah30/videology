@@ -171,8 +171,8 @@
                   <div class="col-lg-3 col-md-4">
                      <ul class="f-link list-unstyled mb-0">
                         <li><a href="#">About Us</a></li>
-                        <li><a href="movie-category.html">Movies</a></li>
-                        <li><a href="show-category.html">Tv Shows</a></li>
+                        <li><a href="movie-category.php">Movies</a></li>
+                        <li><a href="show-category.php">Tv Shows</a></li>
                         <li><a href="#">Coporate Information</a></li>
                      </ul>
                   </div>

@@ -50,10 +50,10 @@
                                         <a href="index-2.php">Home</a>
                                     </li>
                                     <li class="menu-item">
-                                        <a href="show-category.html">Tv Shows</a>
+                                        <a href="show-category.php">Tv Shows</a>
                                     </li>
                                     <li class="menu-item">
-                                        <a href="movie-category.html">Movies</a>
+                                        <a href="movie-category.php">Movies</a>
                                     </li>
                                 </ul>
                             </div>
@@ -136,7 +136,7 @@
                                             <div class="iq-sub-dropdown iq-user-dropdown">
                                                 <div class="iq-card shadow-none m-0">
                                                     <div class="iq-card-body p-0 pl-3 pr-3">
-                                                        <a href="manage-profile.html"
+                                                        <a href="manage-profile.php"
                                                             class="iq-sub-card setting-dropdown">
                                                             <div class="media align-items-center">
                                                                 <div class="right-icon">
@@ -147,7 +147,7 @@
                                                                 </div>
                                                             </div>
                                                         </a>
-                                                        <a href="setting.html" class="iq-sub-card setting-dropdown">
+                                                        <a href="setting.php" class="iq-sub-card setting-dropdown">
                                                             <div class="media align-items-center">
                                                                 <div class="right-icon">
                                                                     <i class="ri-settings-4-line text-primary"></i>
@@ -157,7 +157,7 @@
                                                                 </div>
                                                             </div>
                                                         </a>
-                                                        <a href="pricing-plan.html"
+                                                        <a href="pricing-plan.php"
                                                             class="iq-sub-card setting-dropdown">
                                                             <div class="media align-items-center">
                                                                 <div class="right-icon">
@@ -168,7 +168,7 @@
                                                                 </div>
                                                             </div>
                                                         </a>
-                                                        <a href="login.html" class="iq-sub-card setting-dropdown">
+                                                        <a href="login.php" class="iq-sub-card setting-dropdown">
                                                             <div class="media align-items-center">
                                                                 <div class="right-icon">
                                                                     <i class="ri-logout-circle-line text-primary"></i>
@@ -258,7 +258,7 @@
                                     <div class="iq-sub-dropdown iq-user-dropdown">
                                         <div class="iq-card shadow-none m-0">
                                             <div class="iq-card-body p-0 pl-3 pr-3">
-                                                <a href="manage-profile.html" class="iq-sub-card setting-dropdown">
+                                                <a href="manage-profile.php" class="iq-sub-card setting-dropdown">
                                                     <div class="media align-items-center">
                                                         <div class="right-icon">
                                                             <i class="ri-file-user-line text-primary"></i>
@@ -268,7 +268,7 @@
                                                         </div>
                                                     </div>
                                                 </a>
-                                                <a href="setting.html" class="iq-sub-card setting-dropdown">
+                                                <a href="setting.php" class="iq-sub-card setting-dropdown">
                                                     <div class="media align-items-center">
                                                         <div class="right-icon">
                                                             <i class="ri-settings-4-line text-primary"></i>
@@ -278,7 +278,7 @@
                                                         </div>
                                                     </div>
                                                 </a>
-                                                <a href="pricing-plan.html" class="iq-sub-card setting-dropdown">
+                                                <a href="pricing-plan.php" class="iq-sub-card setting-dropdown">
                                                     <div class="media align-items-center">
                                                         <div class="right-icon">
                                                             <i class="ri-settings-4-line text-primary"></i>
@@ -288,7 +288,7 @@
                                                         </div>
                                                     </div>
                                                 </a>
-                                                <a href="login.html" class="iq-sub-card setting-dropdown">
+                                                <a href="login.php" class="iq-sub-card setting-dropdown">
                                                     <div class="media align-items-center">
                                                         <div class="right-icon">
                                                             <i class="ri-logout-circle-line text-primary"></i>
@@ -380,7 +380,7 @@
                                 <p>Premium</p>                                
                             </div>
                             <div class="col-md-4 text-md-right text-left">
-                                <a href="pricing-plan.html" class="text-primary">Change Plan</a>
+                                <a href="pricing-plan.php" class="text-primary">Change Plan</a>
                             </div>
                         </div>
                         <h5 class="mb-3 pb-3 mt-4 a-border">Setting</h5>
@@ -403,8 +403,8 @@
                     <div class="col-lg-3 col-md-4">
                         <ul class="f-link list-unstyled mb-0">
                             <li><a href="#">About Us</a></li>
-                            <li><a href="movie-category.html">Movies</a></li>
-                            <li><a href="show-category.html">Tv Shows</a></li>
+                            <li><a href="movie-category.php">Movies</a></li>
+                            <li><a href="show-category.php">Tv Shows</a></li>
                             <li><a href="#">Coporate Information</a></li>
                         </ul>
                     </div>
