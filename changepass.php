@@ -25,104 +25,121 @@ if (isset($_SESSION['username']) && isset($_SESSION['email'])) { ?>
 </head>
 
 <body>
-    <!-- loader Start  -->
-    <div id="loading">
-        <div id="loading-center">
-        </div>
-    </div>
-    <!-- loader END -->
-
+  
 
 <?php
-    // $sql = "SELECT username, dob, gender, language
-    //                 FROM users
-    //                 INNER JOIN personal_details
-    //                 ON users.id = personal_details.user_id
-    //                 WHERE ( email = '$email' )";
 
-                    ?>
+$email = $_SESSION["email"];
 
-        <?php
+$sql = "SELECT password
+FROM users
+WHERE (email = '$email')";
 
-                    $email = $_SESSION["email"];
-                    
-
-                    $sql = "SELECT username
-                    FROM users
-                    WHERE ( email = '$email' )";
-                    $result0 = mysqli_query($con, $sql) or die("Query Failed.");
-                    $row0 = mysqli_fetch_assoc($result0);
-
-                    $username = $row0['username'];
+$result = mysqli_query($con, $sql);
+$row = mysqli_fetch_assoc($result);
+$password =  $row['password'];
 
 
+if (isset($_POST['confirm'])) {
 
-                    $sql = "SELECT dob, gender, language
-                    FROM users
-                    INNER JOIN personal_details
-                    ON users.id = personal_details.user_id
-                    WHERE ( email = '$email' )";
-                    $result = mysqli_query($con, $sql)or die("Query Failed.");
-                    $row = mysqli_fetch_assoc($result);
+    $newpass = ($_POST['pass1']);
 
-                    if($row){                
-                     $dob = $row['dob'];
-                    $gender = $row['gender'];
-                     $language = $row['language'];
-                }
+    $query = "
+        UPDATE users
+    SET
+        users.password = '$newpass' 
+        WHERE (email = '$email')";
+        mysqli_query($con, $query) or die("Query Failed.");
+        header("Refresh:5 URL = index-2.php");
 
+}
 
-
-    if (isset($_POST['save'])) {
-
-        if ($row) {
-
-            $username1 = ($_POST['username']);
-            $dob1 = ($_POST['dob']);
-            $gender1 = (($_POST['gender']));
-            $language1 = (($_POST['language']));
-
-            $query = "
-            UPDATE users
-            INNER JOIN personal_details
-                    ON users.id = personal_details.user_id
-        SET
-            users.username =  '$username1',            
-            personal_details.dob = '$dob1',
-            personal_details.gender = '$gender1',
-            personal_details.language = '$language1'
-            WHERE (email = '$email')";
-
-            mysqli_query($con, $query) or die("Query Failed.");
-
-            header("Refresh:0;");
-
-        }
-
-        else {
-
-            $username1 = ($_POST['username']);
-            $dob1 = ($_POST['dob']);
-            $gender1 = (($_POST['gender']));
-            $language1 = (($_POST['language']));
-    
-            $query1 = "
-            INSERT INTO personal_details (user_id, dob ,gender, language)
-            VALUES((SELECT id FROM users WHERE email = '$email'),'$dob1','$gender1','$language1')";
-
-            mysqli_query($con, $query1) or die("Query Failed.");
-
-            header("Refresh:0;");
-    
-    
-        }
+    ?>
+      
 
 
+<script>
+function verifyPassword() {
 
-    } 
+  var pass = document.getElementById("pass").value;
+  var pass1 = document.getElementById("pass1").value;
+  var pass2 = document.getElementById("pass2").value;
+  //check empty password field
+  if(pass == "") {
+     document.getElementById("message").innerHTML = "**Fill the password please!";
+     return false;
+  }
+
+  if(pass == <?php echo ($password)?>) {
+     document.getElementById("message").innerHTML = "**Password Not matched with your previous data";
+     return false;
+  }
+ 
+ //minimum password length validation
+  if(pass.length < 3) {
+     document.getElementById("message").innerHTML = "**Password length must be atleast 8 characters";
+     return false;
+  }
+
+//maximum length of password validation
+  if(pass.length > 15) {
+     document.getElementById("message").innerHTML = "**Password length must not exceed 15 characters";
+     return false;
+  } else {
+    document.getElementById("message").innerHTML = "**Password Successfully Changed";
+  }
+
+}
 
 
-            ?>
+function checkPassword() {
+
+    var pass = document.getElementById("pass").value;
+     var pass1 = document.getElementById("pass1").value;
+    var pass2 = document.getElementById("pass2").value;
+
+
+    const allNull = [pass, pass1, pass2].some(element => element == "");
+
+    if(allNull) {
+     document.getElementById("message").innerHTML = "**Fill the password please!";
+     return false;
+    }
+
+     if(pass !== "<?php echo ($password) ?>") {
+     document.getElementById("message").innerHTML = "**Password Not matched with your previous data";
+     return false;
+  
+     } else {
+
+        if(pass1.length < 5) {
+     document.getElementById("message").innerHTML = "**Password length must be atleast 6 characters";
+     return false;
+            
+    }
+
+    else if (pass1.length > 10) {
+     document.getElementById("message").innerHTML = "**Password length must not exceed 10 characters";
+     return false;
+  }
+
+    else if (pass1 != pass2)
+  {	
+    document.getElementById("message").innerHTML = "**Password didn't Match, Please try again**";
+  } else {
+
+
+    document.getElementById("message").innerHTML = "Password Changed successfully";
+
+  }
+
+
+}
+
+
+
+}
+</script>
 
 
 
@@ -161,134 +178,7 @@ if (isset($_SESSION['username']) && isset($_SESSION['email'])) { ?>
                                     </ul>
                                 </div>
                             </div>
-                            <div class="mobile-more-menu">
-                                <a href="javascript:void(0);" class="more-toggle" id="dropdownMenuButton"
-                                    data-toggle="more-toggle" aria-haspopup="true" aria-expanded="false">
-                                    <i class="ri-more-line"></i>
-                                </a>
-                                <div class="more-menu" aria-labelledby="dropdownMenuButton">
-                                    <div class="navbar-right position-relative">
-                                        <ul class="d-flex align-items-center justify-content-end list-inline m-0">
-                                            <li>
-                                                <a href="#" class="search-toggle">
-                                                    <i class="ri-search-line"></i>
-                                                </a>
-                                                <div class="search-box iq-search-bar">
-                                                    <form action="#" class="searchbox">
-                                                        <div class="form-group position-relative">
-                                                            <input type="text" class="text search-input font-size-12"
-                                                                placeholder="type here to search...">
-                                                            <i class="search-link ri-search-line"></i>
-                                                        </div>
-                                                    </form>
-                                                </div>
-                                            </li>
-                                            <li class="nav-item nav-icon">
-                                                <a href="#" class="search-toggle position-relative">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22"
-                                                        height="22" class="noti-svg">
-                                                        <path fill="none" d="M0 0h24v24H0z" />
-                                                        <path
-                                                            d="M18 10a6 6 0 1 0-12 0v8h12v-8zm2 8.667l.4.533a.5.5 0 0 1-.4.8H4a.5.5 0 0 1-.4-.8l.4-.533V10a8 8 0 1 1 16 0v8.667zM9.5 21h5a2.5 2.5 0 1 1-5 0z" />
-                                                    </svg>
-                                                    <span class="bg-danger dots"></span>
-                                                </a>
-                                                <div class="iq-sub-dropdown">
-                                                    <div class="iq-card shadow-none m-0">
-                                                        <div class="iq-card-body">
-                                                            <a href="#" class="iq-sub-card">
-                                                                <div class="media align-items-center">
-                                                                    <img src="images/notify/thumb-1.jpg"
-                                                                        class="img-fluid mr-3" alt="videology" />
-                                                                    <div class="media-body">
-                                                                        <h6 class="mb-0 ">Boop Bitty</h6>
-                                                                        <small class="font-size-12"> just now</small>
-                                                                    </div>
-                                                                </div>
-                                                            </a>
-                                                            <a href="#" class="iq-sub-card">
-                                                                <div class="media align-items-center">
-                                                                    <img src="images/notify/thumb-2.jpg"
-                                                                        class="img-fluid mr-3" alt="videology" />
-                                                                    <div class="media-body">
-                                                                        <h6 class="mb-0 ">The Last Breath</h6>
-                                                                        <small class="font-size-12">15 minutes ago</small>
-                                                                    </div>
-                                                                </div>
-                                                            </a>
-                                                            <a href="#" class="iq-sub-card">
-                                                                <div class="media align-items-center">
-                                                                    <img src="images/notify/thumb-3.jpg"
-                                                                        class="img-fluid mr-3" alt="videology" />
-                                                                    <div class="media-body">
-                                                                        <h6 class="mb-0 ">The Hero Camp</h6>
-                                                                        <small class="font-size-12">1 hour ago</small>
-                                                                    </div>
-                                                                </div>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <a href="#"
-                                                    class="iq-user-dropdown search-toggle d-flex align-items-center">
-                                                    <img src="images/user/user.jpg"
-                                                        class="img-fluid avatar-40 rounded-circle" alt="user">
-                                                </a>
-                                                <div class="iq-sub-dropdown iq-user-dropdown">
-                                                    <div class="iq-card shadow-none m-0">
-                                                        <div class="iq-card-body p-0 pl-3 pr-3">
-                                                            <a href="manage-profile.php"
-                                                                class="iq-sub-card setting-dropdown">
-                                                                <div class="media align-items-center">
-                                                                    <div class="right-icon">
-                                                                        <i class="ri-file-user-line text-primary"></i>
-                                                                    </div>
-                                                                    <div class="media-body ml-3">
-                                                                        <h6 class="mb-0 ">Manage Profile</h6>
-                                                                    </div>
-                                                                </div>
-                                                            </a>
-                                                            <a href="setting.php" class="iq-sub-card setting-dropdown">
-                                                                <div class="media align-items-center">
-                                                                    <div class="right-icon">
-                                                                        <i class="ri-settings-4-line text-primary"></i>
-                                                                    </div>
-                                                                    <div class="media-body ml-3">
-                                                                        <h6 class="mb-0 ">Settings</h6>
-                                                                    </div>
-                                                                </div>
-                                                            </a>
-                                                            <a href="pricing-plan.php"
-                                                                class="iq-sub-card setting-dropdown">
-                                                                <div class="media align-items-center">
-                                                                    <div class="right-icon">
-                                                                        <i class="ri-settings-4-line text-primary"></i>
-                                                                    </div>
-                                                                    <div class="media-body ml-3">
-                                                                        <h6 class="mb-0 ">Pricing Plan</h6>
-                                                                    </div>
-                                                                </div>
-                                                            </a>
-                                                            <a href="login.php" class="iq-sub-card setting-dropdown">
-                                                                <div class="media align-items-center">
-                                                                    <div class="right-icon">
-                                                                        <i class="ri-logout-circle-line text-primary"></i>
-                                                                    </div>
-                                                                    <div class="media-body ml-3">
-                                                                        <h6 class="mb-0">Logout</h6>
-                                                                    </div>
-                                                                </div>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
+                            
                             <div class="navbar-right menu-right">
                                 <ul class="d-flex align-items-center list-inline m-0">
                                     <li class="nav-item nav-icon">
@@ -415,70 +305,49 @@ if (isset($_SESSION['username']) && isset($_SESSION['email'])) { ?>
             </div>
         </div>
     </header>
-    <!-- Header End -->
+    <!--Header End -->
+
+
     <!-- MainContent -->
     <section class="m-profile manage-p">
         <div class="container h-100">
-            <div class="row align-items-center justify-content-center h-100">
+            <div class="row align-items-center justify-content-center">
                 <div class="col-lg-10">
                     <div class="sign-user_card">
                         <div class="row">
-                            <div class="col-lg-2">
-                                <div class="upload_profile d-inline-block">
-                                <img src="images/user/user.jpg" class="profile-pic rounded-circle img-fluid" alt="user">
-                                <div class="p-image">
-                                    <i class="ri-pencil-line upload-button"></i>
-                                    <input class="file-upload" type="file" accept="image/*">
-                                </div>
-                                </div>
-                            </div>
-
-
-
-
 
 
                             <div class="col-lg-10 device-margin">
                                 <div class="profile-from">
-                                    <h4 class="mb-3">Manage Profile</h4>
+                                
+                                    <h4 class="mb-3">Change Password</h4>
 
-                                    <form class="mt-4" method="POST" action="">
+                                    <form class="mt-4" method="POST" action="" >
+                                    <span id = "message" style="color:red"> </span> 
+
 
 
                                         <div class="form-group">
-                                            <label>Name</label>
-                                            <input type="text" class="form-control mb-0" id="exampleInputl2" name="username"
-                                                placeholder="Enter Your Name" autocomplete="off" value= "<?php if (isset($username)) echo($username)?>" required
-                                                
-                                                >
+                                            <label>Old Password</label>
+                                            <input type="password" class="form-control mb-0" id="pass"
+                                                placeholder="Enter Your Old Password" autocomplete="off"  >
                                         </div>
+
                                         <div class="form-group">
-                                            <label>Date of Birth</label>
-                                            <input type="text" class="form-control date-input basicFlatpickr mb-0" placeholder="Select Date" id="exampleInputPassword2"
-                                            name ="dob" value="<?php if (isset($dob)) echo($dob)?>" 
-                                            required>
+                                            <label>New Password</label>
+                                            <input type="password" class="form-control mb-0" id="pass1" name="pass1"
+                                                placeholder="Enter Your New Password" autocomplete="off"   >
                                         </div>
-                                        <div class="form-group d-flex flex-md-row flex-column">
-                                            <div class="iq-custom-select d-inline-block manage-gen">
-                                                <select name="gender" class="form-control pro-dropdown" >
 
-                                                    <option value="Female" <?php if(isset($gender))if(($gender)=='Female') echo('selected') ?> >Female</option>
-                                                    <option value="Male" <?php if(isset($gender))if(($gender)=='Male') echo('selected') ?> >Male</option>
-                                                </select>
-                                            </div>
-                                            <div class="iq-custom-select d-inline-block lang-dropdown manage-dd">
-                                                <select name="language" class="form-control pro-dropdown" id="lang"
-                                                    multiple="multiple">
-                                                    <option value="English" <?php if(isset($language)) if(($language)=='English') echo('selected') ?> > English </option>
-                    
-                                                    <option value="Bangla" <?php if(isset($language))if(($language)=='Bangla') echo('selected') ?> > বাংলা </option>
-
-                                                </select>
-                                            </div>
+                                        <div class="form-group">
+                                            <label>Confirm Password</label>
+                                            <input type="password" class="form-control mb-0" id="pass2"
+                                                placeholder="Confirm Your New Password" autocomplete="off"  >
                                         </div>
+
                                         <div class="d-flex">
-                                        <button type="submit" name="save" class="btn btn-hover">Save</button>
-                                            <a href="index-2.php" class="btn btn-link">Cancel</a>
+                                        <button type="submit" onclick=" return checkPassword()" name="confirm"  class="btn btn-hover" >Confirm</button>
+                                         
                                         </div>
                                     </form>
                                 </div>

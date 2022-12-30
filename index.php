@@ -1,3 +1,9 @@
+<?php
+session_start();
+
+if (empty($_SESSION['username'])) { ?>
+
+
 <!doctype html>
 <html lang="en-US">
    
@@ -4011,3 +4017,9 @@
    </body>
 
 </html>
+
+</html>
+<?php } else {
+    header("Location: login.php");
+} 
+?>

@@ -7,7 +7,6 @@ if (empty($_SESSION['username'])) { ?>
    <html lang="en-US">
 
 
-         <?php echo "Arif" ?>
 
 <head>
    <!-- Required meta tags -->
@@ -103,7 +102,7 @@ if (empty($_SESSION['username'])) { ?>
 
 
 <?php }else {
-    header("Location: login.php");
+    header("Location: index-2.php");
 } 
 
 ?>

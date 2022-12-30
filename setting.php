@@ -1,6 +1,13 @@
+<?php
+session_start();
+include "includes/db_connect.php";
+if (isset($_SESSION['username']) && isset($_SESSION['email'])) { ?>
+
+
+
+
 <!doctype html>
 <html lang="en-US">
-
 
 <head>
     
@@ -312,6 +319,54 @@
     </div>
 </header>
     <!-- Header End -->
+
+
+
+
+
+
+                <!---php start -->
+
+
+
+              <?php
+
+                    $email = $_SESSION["email"];
+
+
+                    $sql = "SELECT username
+                    FROM users
+                    WHERE ( email = '$email' )";
+                    $result0 = mysqli_query($con, $sql) or die("Query Failed.");
+                    $row0 = mysqli_fetch_assoc($result0);
+
+                    $username = $row0['username'];
+
+
+
+                    $sql = "SELECT dob, gender, language
+                    FROM users
+                    INNER JOIN personal_details
+                    ON users.id = personal_details.user_id
+                    WHERE ( email = '$email' )";
+                    $result = mysqli_query($con, $sql)or die("Query Failed.");
+                    $row = mysqli_fetch_assoc($result);
+
+                    if($row){                
+                    $dob = $row['dob'];
+                    $gender = $row['gender'];
+                    $language = $row['language'];
+                    }
+
+                    ?>
+
+
+<!------ Php End ----->
+
+
+
+
+
     <!-- MainContent -->
     <section class="m-profile setting-wrapper">        
         <div class="container">
@@ -320,18 +375,41 @@
                 <div class="col-lg-4 mb-3">
                     <div class="sign-user_card text-center">
                         <img src="images/user/user.jpg" class="rounded-circle img-fluid d-block mx-auto mb-3" alt="user">
-                        <h4 class="mb-3">John Doe</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-                        <a href="#" class="edit-icon text-primary">Edit</a>
+
+                        <h4 class="mb-3"><?php if (isset($username)) echo($username)?></h4>
+                        <p id = "edit">About Your Self</p>
+                        <button type="submit" id="edit-button" class="edit-icon text-primary" style="background-color: #141414;" > Edit </button>
                     </div>
                 </div>
+
+                <script>
+
+const paragraph = document.getElementById("edit");
+const edit_button = document.getElementById("edit-button");
+
+edit_button.addEventListener("click", function() {
+  paragraph.contentEditable = true;
+  paragraph.style.backgroundColor = "black";
+} );
+
+window.addEventListener("dblclick", function(){
+
+    paragraph.contentEditable = false;
+    paragraph.style.backgroundColor = "#191919";
+    
+})
+
+
+    </script>
+
+
                 <div class="col-lg-8">
                     <div class="sign-user_card">
                         <h5 class="mb-3 pb-3 a-border">Personal Details</h5>
                         <div class="row align-items-center justify-content-between mb-3">
                             <div class="col-md-8">
                                 <span class="text-light font-size-13">Email</span>
-                                <p class="mb-0"><a href="https://iqonic.design/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c5a0bda4a8b5a9a085a2a8a4aca9eba6aaa8">[email&#160;protected]</a></p>
+                                <p class="mb-0"><a href="" ><?php if (isset($email)) echo($email)?></a></p>
                             </div>   
                             <div class="col-md-4 text-md-right text-left">                      
                                 <a href="#" class="text-primary">Change</a>
@@ -343,25 +421,26 @@
                                 <p class="mb-0">**********</p>
                             </div>
                             <div class="col-md-4 text-md-right text-left">
-                                <a href="#" class="text-primary">Change</a>
+                                <a href="changepass.php" class="text-primary">Change</a>
                             </div>
                         </div>
                         <div class="row align-items-center justify-content-between mb-3">
                             <div class="col-md-8">
                                 <span class="text-light font-size-13">Date of Birth</span>
-                                <p class="mb-0">08-03-1995</p>
+                                <p class="mb-0"><?php if (isset($dob)) echo($dob)?></p>
                             </div>
                             <div class="col-md-4 text-md-right text-left">
-                                <a href="#" class="text-primary">Change</a>
+                                <a href="manage-profile.php" class="text-primary">Change</a>
                             </div>
                         </div>
                         <div class="row align-items-center justify-content-between">
                             <div class="col-md-8">
                                 <span class="text-light font-size-13">Language</span>
-                                <p class="mb-0">English</p>
+                                <p class="mb-0"><?php if (isset($language))if (($language) == 'English')
+        echo                            ('English'); else echo('Bangla') ?></p>
                             </div>
                             <div class="col-md-4 text-md-right text-left">
-                                <a href="#" class="text-primary">Change</a>
+                                <a href="manage-profile.php" class="text-primary">Change</a>
                             </div>
                         </div>
                         <h5 class="mb-3 mt-4 pb-3 a-border">Billing Details</h5>
@@ -443,7 +522,7 @@
         </div>
         <div class="copyright py-2">
             <div class="container-fluid">
-                <p class="mb-0 text-center font-size-14 text-body">STREAMIT - 2020 All Rights Reserved</p>
+                <p class="mb-0 text-center font-size-14 text-body">Videology - 2022 All Rights Reserved</p>
             </div>
         </div>
     </footer>
@@ -472,5 +551,9 @@
     <script src="js/custom.js"></script>
 </body>
 
-
 </html>
+
+<?php } else {
+    header("Location: login.php");
+} 
+?>
